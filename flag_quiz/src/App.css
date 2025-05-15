@@ -105,11 +105,25 @@ select:focus {
   margin-top: 2rem;
 }
 
+.App-header {
+  position: relative;  /* ← NEW */
+}
+
+/* remove margin-top on .celebration — replaced entirely */
 .celebration {
-  margin-top: 2rem;
+  position: fixed;        /* overlays everything                       */
+  top: 40px;              /* 40 px from the very top of the viewport   */
+  left: 0;                /* full-width strip → easy centering         */
+  right: 0;
+  text-align: center;     /* center the text horizontally              */
+
   font-size: 3rem;
+  z-index: 1000;
+  pointer-events: none;
   animation: celebration 1s ease-in-out forwards;
 }
+
+
 
 .celebration.correct {
   color: #ff9800;
@@ -128,4 +142,15 @@ select:focus {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+
+.question-progress {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.level-summary h3 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
 }
