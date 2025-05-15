@@ -56,7 +56,7 @@ function App() {
 
       <div className="App">
         <header className="App-header">
-          <h1>Taj's Flag Quiz</h1>
+          <h1>Tajan's Flag Quiz</h1>
 
           <div className="level-select">
             <label htmlFor="level-select">Select Level: </label>
